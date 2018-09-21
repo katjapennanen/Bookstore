@@ -1,6 +1,5 @@
 package fi.haagahelia.sp.bookstore.domain;
 
-import java.util.function.*;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
