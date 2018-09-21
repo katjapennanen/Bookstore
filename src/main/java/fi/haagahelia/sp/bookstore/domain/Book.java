@@ -10,13 +10,16 @@ import javax.persistence.Id;
 		@Id
 		@GeneratedValue(strategy=GenerationType.AUTO)
 
-		private String title;
-		private String author;
+		private long id;
+		private String title, author, isbn;
 		private int year;
-		private String isbn;
 		private double price;
 		
+		public Book() {
+		}
+		
 		public Book(String title, String author, int year, String isbn, double price) {
+			super();
 			this.title = title;
 			this.author = author;
 			this.year = year;
@@ -24,6 +27,7 @@ import javax.persistence.Id;
 			this.price = price;
 		}
 		
+		//* GETTERS
 		public String getTitle() {
 			return title;
 		}
@@ -44,6 +48,7 @@ import javax.persistence.Id;
 			return price;
 		}
 		
+		//* SETTERS
 		public void setTitle(String title) {
 			this.title = title;
 		}
