@@ -8,6 +8,7 @@
 	<h1>Add book</h1>
 	<div>
 		<form th:object="${book}" th:action="@{save}" action="#" method="post">
+		
 		  	<label for="author">Author</label>
 			<input type="text" id="author" th:field="*{author}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
