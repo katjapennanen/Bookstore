@@ -19,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 		private double price;
 		
 		@ManyToOne
-		@JsonIgnore
 	    @JoinColumn(name = "categoryId")
 	    private Category category;
 		

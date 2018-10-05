@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
 @Entity
 public class Category {
 	@Id
@@ -49,5 +48,4 @@ public class Category {
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}
-	
 }
