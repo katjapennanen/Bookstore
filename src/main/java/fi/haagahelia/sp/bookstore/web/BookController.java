@@ -55,6 +55,11 @@ public class BookController {
 		model.addAttribute("book", repository.findById(bookId));
 		model.addAttribute("categories", crepository.findAll());
 		return "editbook";
-
+	}
+	
+	// Cancel action
+	@RequestMapping(value = "/cancel", method = RequestMethod.GET)
+	public String cancel() {
+		return "redirect:booklist";
 	}
 }

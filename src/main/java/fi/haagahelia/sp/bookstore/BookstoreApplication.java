@@ -29,6 +29,7 @@ public class BookstoreApplication {
 			crepository.save(new Category("Fantasy"));
 			crepository.save(new Category("Science Fiction"));
 			crepository.save(new Category("Fiction"));
+			crepository.save(new Category("Graphic Novel"));
 
 			brepository.save(new Book("It", "Stephen King", "1234567890123", 1986, 20.99,
 					crepository.findByName("Horror").get(0)));
@@ -38,6 +39,8 @@ public class BookstoreApplication {
 					20.99, crepository.findByName("Science Fiction").get(0)));
 			brepository.save(new Book("And the Ass Saw the Angel", "Nick Cave", "1234567890123", 1989, 20.99,
 					crepository.findByName("Fiction").get(0)));
+			brepository.save(new Book("Maus", "Art Spiegelman", "1234567890123", 1991, 20.99,
+					crepository.findByName("Graphic Novel").get(0)));
 
 			log.info("fetch all books");
 			for (Book book : brepository.findAll()) {
