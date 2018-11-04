@@ -26,7 +26,7 @@ public class BookstoreApplication {
 	@Bean
 	public CommandLineRunner bookDemo(BookRepository brepository, CategoryRepository crepository, UserRepository urepository) {
 		return (args) -> {
-			log.info("save a couple of books and create categories");
+			log.info("save a couple of books and create categories and users");
 
 			crepository.save(new Category("Horror"));
 			crepository.save(new Category("Fantasy"));
@@ -41,8 +41,8 @@ public class BookstoreApplication {
 			brepository.save(new Book("Maus", "Art Spiegelman", "1234567890123", 1991, 20.99, crepository.findByName("Graphic Novel").get(0)));
 			
 			// Create users: admin/admin user/user
-			User user1 = new User("user", "$2a$04$19ycEAQTqV66Cg4bZt9oR.xTEzfEaEXLrr/dSsOBVIjNr/ep3wtEm", "USER");
-			User user2 = new User("admin", "$2a$04$txKbHel.N18yPJDEufmO..KFpUHaCa9AY7Am.fQdTou8uE8qZgOU6", "ADMIN");
+			User user1 = new User("user", "$2a$10$yPNvrMidBDJfKcLSwE3pFe1psXbwz2B36L16iP3p5XqY.s4WQq5wK", "USER");
+			User user2 = new User("admin", "$2a$10$oVsKG/JjIyuSejF23XyTEuF4mx90fGXGyOg.o7TTUY/IyXlNakdFS", "ADMIN");
 			urepository.save(user1);
 			urepository.save(user2);
 
